@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature converter</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Temperature Converter</h1>
+      <form onsubmit="return calcTemp(event)">
+        <div class="columns is-vcentered p-1 ">
+          <div class="column is-2 is-narrow">
+            <div class="field">
+              <label class="label" for="degrees">Degrees</label>
+              <div class="control">
+                <input class="input" name="degrees" type="number">
+              </div>
+            </div>
+          </div>
+          <div class="column is-narrow">
+            <div class="field">
+              <label class="label" for="type">Type</label>
+              <div class="select">
+                <select name="type">
+                  <option value="celsius">Celsius</option>
+                  <option value="fahrenheit">Fahrenheit</option>
+                  <option value="kelvin">Kelvin</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="column is-2 is-narrow mt-5 pt-4">
+            <button class="button is-primary">Convert</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="mt-5">
+        <div class="field">
+          <div class="label">Result</div>
+          <p id="calulatedTemperature" class="title is-5 is-spaced">Press 'Convert' to get your result here.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+
+</html>
